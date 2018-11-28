@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="windows-1256">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<title>New User</title>
+<style type="text/css">
+body {
+	background-color: lightblue;
+}
+
+a {
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<!--  <a href="viewusers.jsp">View All Records</a>-->
+
+	<br />
+
+	<h2 class="center">User Management System</h2>
+	<form action="adduser.jsp" method="post">
+		<table class="table">
+			<tr>
+				<td><div class="form-group">
+
+						<label for="usr">Name</label>
+					</div></td>
+				<td><div class="form-group">
+						<input type="text" placeholder="Enter Name" class="form-control"
+							name="name" id="usr" required="required" />
+					</div></td>
+			</tr>
+
+			<tr>
+				<td><div class="form-group">
+						<label for="eml">Email</label>
+					</div></td>
+				<td><div class="form-group">
+						<input type="email" class="form-control" placeholder="Enter Email"
+							name="email" id="eml" required="required" />
+					</div></td>
+			</tr>
+			<!-- <tr>
+				<td><div class="form-group">
+
+						<label for="usr">Mobile</label>
+					</div></td>
+				<td><div class="form-group">
+						<input type="text" placeholder="Enter Name" class="form-control"
+							name="name" id="usr" required="required" />
+					</div></td>
+			</tr> -->
+			<!-- <tr>
+				<td><div class="form-group">
+
+						<label for="usr">Address</label>
+					</div></td>
+				<td><div class="form-group">
+						<input type="text" placeholder="Enter Name" class="form-control"
+							name="name" id="usr" required="required" />
+					</div></td>
+			</tr> -->
+			<tr>
+				<td><div class="form-group">
+						<label for="pwd">Password</label>
+					</div></td>
+				<td><div class="form-group">
+						<input type="password" placeholder="Enter Password"
+							class="form-control" name="password" id="pwd" required="required" />
+					</div></td>
+			</tr>
+			<tr>
+				<td>Sex</td>
+				<td><input type="radio" name="sex" value="male" />Male <input
+					type="radio" name="sex" value="female" />Female</td>
+			</tr>
+			<tr>
+				<td><div class="form-group">
+						<label for="country">Country</label>
+					</div></td>
+				<td><div class="form-group">
+						<select name="country" class="form-control" id="country"
+							style="width: 155px">
+							<option>India</option>
+							<option>Bangladesh</option>
+							<option>Pakistan</option>
+							<option>Nepal</option>
+							<option>Srilanka</option>
+							<option>Bhutan</option>
+							<option>Other</option>
+						</select>
+					</div></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit" class="btn btn-success">Add
+						User</button></td>
+
+				<td><div class="form-group">
+						<div class="col-md-10 col-md-offset-1">
+							<a class="btn btn-link" href="viewusers.jsp">View All Users </a>
+						</div>
+					</div></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
