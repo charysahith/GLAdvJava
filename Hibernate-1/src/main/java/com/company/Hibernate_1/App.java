@@ -5,7 +5,7 @@ import org.hibernate.cfg.Configuration;
 
 public class App {
 	public static void main(String[] args) {
-		Configuration config = new Configuration().configure("hibernate.cfg.xml");
+		Configuration config = new Configuration().configure().addAnnotatedClass(Order.class);
 
 		SessionFactory factory = config.buildSessionFactory();
 
@@ -13,9 +13,8 @@ public class App {
 
 		System.out.println("session established !");
 
-		Order order = new Order(1122, "Hibernate Book");
-
 		session.beginTransaction();
+		Order order = new Order(1122, "Hibernate Book");
 		session.persist(order);
 		System.out.println("object saved into db");
 		System.out.println(session.getStatistics());
